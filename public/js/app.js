@@ -1,6 +1,6 @@
 
 
-console.log("Loading Javascript file")
+
 
 
 
