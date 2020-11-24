@@ -77,9 +77,7 @@ app.get('/weather',(req,res)=>{
             if(error){
                return res.send({error})
             }
-            //console.log(Place)
-            //console.log(dataforecast)
-
+            
             res.send({
                 forcasteData:dataforecast,
                 location:location 
@@ -93,21 +91,7 @@ app.get('/weather',(req,res)=>{
      
 })
 
-app.get('/product',(req,res)=>{
-     console.log(req.query)
-     if(!req.query.search){
 
-        return res.send({
-            errorMessage:"No Search has been Provided"
-        })
-     }
-
-     console.log(req.query.search)
-     res.send({
-
-        product:[]
-     })
-})
 
 app.get('/help/*',(req,res)=>{
 
