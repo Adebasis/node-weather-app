@@ -6,6 +6,7 @@ const forecast=require('./utils/forecast.js')
 
 
 const app=express()
+const port=process.env.PORT || 3000  // for heroku server port
 
 //console.log(__dirname)  // show current directory of the file with path
 //console.log(__filename) // show current file name with path
@@ -126,6 +127,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("Server is running")
 })
